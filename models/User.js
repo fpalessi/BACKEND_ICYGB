@@ -7,7 +7,10 @@ const userSchema = new mongoose.Schema(
     email: { type: String, required: true, trim: true, unique: true },
     password: { type: String, required: true, trim: true },
     token: { type: String },
-    confirmed: { type: Boolean, default: false },
+    confirmed: {
+      type: Boolean,
+      default: false,
+    },
     isAdmin: { type: Boolean, default: false },
   },
   { timestamps: true }
